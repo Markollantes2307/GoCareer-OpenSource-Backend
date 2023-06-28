@@ -26,4 +26,8 @@ public class Specialist {
     @JoinColumn(name = "date_id",nullable = false,foreignKey = @ForeignKey(name = "FK_DATE_ID"))
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Date date;
+
+    @ManyToOne
+    @JoinColumn(name = "test_id",nullable = false,foreignKey = @ForeignKey(name = "FK_TEST_ID"))
+    private Test test;
 }

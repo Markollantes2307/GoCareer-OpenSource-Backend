@@ -38,4 +38,8 @@ public class User {
     @JoinColumn(name = "date_id",nullable = false,foreignKey = @ForeignKey(name = "FK_DATE_ID"))
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Date date;
+
+    @ManyToOne
+    @JoinColumn(name = "career_id",nullable = false,foreignKey = @ForeignKey(name = "FK_CAREER_ID"))
+    private Career career;
 }
